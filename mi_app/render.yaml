@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: paec                   # Nombre del servicio en Render
+    env: python                  # Entorno Python
+    plan: free                   # Plan gratuito
+    buildCommand: "pip install -r requirements.txt"   # Instala las dependencias
+    startCommand: "gunicorn paec.wsgi:application"   # Cómo arrancar Django
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: paec.settings     # Configuración principal de Django
