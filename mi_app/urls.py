@@ -1,7 +1,11 @@
-from django.contrib import admin
-from django.urls import path, include   # ← IMPORTANTE: añadir include
+from django.urls import path
+
+from .views import home
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('timeline.urls')),   # ← Aquí agregas tu aplicación
+
+    path('', home, name='home'),
+
 ]
