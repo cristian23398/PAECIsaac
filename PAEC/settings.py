@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5kcue7q2nhk9pm2ut&@0kx7-5w!b(3p=yb1d=*(mv_1=+)$&4)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -117,8 +117,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# ESTA LÍNEA ES LA QUE PERMITE QUE CARGUEN TUS IMÁGENES EN DESARROLLO
+STATICFILES_DIRS = [
+    BASE_DIR / "mi_app" / "static"
+]
 
+# ESTA SE USA SOLO PARA PRODUCCIÓN (ej: PythonAnywhere, Heroku)
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
