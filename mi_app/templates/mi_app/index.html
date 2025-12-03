@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,16 +12,19 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background: #2c7a7b;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         .timeline {
             width: 80%;
             margin: 40px auto;
         }
+
         .event {
             background: white;
             padding: 20px;
@@ -32,23 +34,44 @@
             cursor: pointer;
             transition: 0.3s;
         }
-        .event:hover { background: #e6f5f5; }
+
+        .event:hover {
+            background: #e6f5f5;
+        }
+
         .event-header {
             display: flex;
             align-items: center;
             gap: 20px;
         }
+
         .event img {
             width: 180px;
             height: 130px;
             object-fit: cover;
             border-radius: 8px;
         }
+
+        .event h3 {
+            margin: 0;
+            color: #2c7a7b;
+        }
+
+        .details {
+            margin-top: 15px;
+            display: none;
+            padding: 15px;
+            background: #f9ffff;
+            border-left: 4px solid #2c7a7b;
+            border-radius: 8px;
+        }
+
         .gallery {
             display: flex;
             gap: 15px;
             margin-top: 15px;
         }
+
         .gallery img {
             width: 160px;
             height: 120px;
@@ -56,6 +79,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -77,9 +101,10 @@
     <!-- Semana 1 -->
     <div class="event" onclick="toggleDetails('s1')">
         <div class="event-header">
-            <img src="{% static 'img/P001.jpg' %}" alt="Semana 1">
+            <img src="static/img/P001.jpg" alt="Semana 1">
             <h3>Semana 1</h3>
         </div>
+
         <div class="details" id="s1">
             <p>Durante esta semana se realizó:</p>
             <ul>
@@ -87,10 +112,11 @@
                 <li>Registro fotográfico del estado inicial.</li>
                 <li>Un poco de Limpieza.</li>
             </ul>
+
             <div class="gallery">
-                <img src="{% static 'img/P002.jpg' %}" alt="Foto 1 semana 1">
-                <img src="{% static 'img/P003.jpg' %}" alt="Foto 2 semana 1">
-                <img src="{% static 'img/P004.jpg' %}" alt="Foto 3 semana 1">
+                <img src="static/img/P002.jpg" alt="Foto 1 semana 1">
+                <img src="static/img/P003.jpg" alt="Foto 2 semana 1">
+                <img src="static/img/P004.jpg" alt="Foto 3 semana 1">
             </div>
         </div>
     </div>
@@ -98,18 +124,20 @@
     <!-- Semana 2 -->
     <div class="event" onclick="toggleDetails('s2')">
         <div class="event-header">
-            <img src="{% static 'img/P005.jpg' %}" alt="Semana 2">
+            <img src="static/img/P005.jpg" alt="Semana 2">
             <h3>Semana 2</h3>
         </div>
+
         <div class="details" id="s2">
             <p>Actividad realizada:</p>
             <ul>
                 <li>Recolección de desechos.</li>
             </ul>
+
             <div class="gallery">
-                <img src="{% static 'img/P006.jpg' %}" alt="Foto 1 semana 2">
-                <img src="{% static 'img/P007.jpg' %}" alt="Foto 2 semana 2">
-                <img src="{% static 'img/P008.jpg' %}" alt="Foto 3 semana 2">
+                <img src="static/img/P006.jpg" alt="Foto 1 semana 2">
+                <img src="static/img/P007.jpg" alt="Foto 2 semana 2">
+                <img src="static/img/P008.jpg" alt="Foto 3 semana 2">
             </div>
         </div>
     </div>
@@ -117,18 +145,20 @@
     <!-- Semana 3 -->
     <div class="event" onclick="toggleDetails('s3')">
         <div class="event-header">
-            <img src="{% static 'img/P009.jpg' %}" alt="Semana 3">
+            <img src="static/img/P009.jpg" alt="Semana 3">
             <h3>Semana 3</h3>
         </div>
+
         <div class="details" id="s3">
             <p>Se realizaron las siguientes actividades:</p>
             <ul>
                 <li>Recolección de desechos.</li>
             </ul>
+
             <div class="gallery">
-                <img src="{% static 'img/P010.jpg' %}" alt="Foto 1 semana 3">
-                <img src="{% static 'img/P011.jpg' %}" alt="Foto 2 semana 3">
-                <img src="{% static 'img/P012.jpg' %}" alt="Foto 3 semana 3">
+                <img src="static/img/P010.jpg" alt="Foto 1 semana 3">
+                <img src="static/img/P011.jpg" alt="Foto 2 semana 3">
+                <img src="static/img/P012.jpg" alt="Foto 3 semana 3">
             </div>
         </div>
     </div>
@@ -136,18 +166,20 @@
     <!-- Semana 4 -->
     <div class="event" onclick="toggleDetails('s4')">
         <div class="event-header">
-            <img src="{% static 'img/P013.jpg' %}" alt="Semana 4">
+            <img src="static/img/P013.jpg" alt="Semana 4">
             <h3>Semana 4</h3>
         </div>
+
         <div class="details" id="s4">
             <p>Actividades:</p>
             <ul>
                 <li>Recolección de desechos.</li>
             </ul>
+
             <div class="gallery">
-                <img src="{% static 'img/P014.jpg' %}" alt="Foto 1 semana 4">
-                <img src="{% static 'img/P015.jpg' %}" alt="Foto 2 semana 4">
-                <img src="{% static 'img/P016.jpg' %}" alt="Foto 3 semana 4">
+                <img src="static/img/P014.jpg" alt="Foto 1 semana 4">
+                <img src="static/img/P015.jpg" alt="Foto 2 semana 4">
+                <img src="static/img/P016.jpg" alt="Foto 3 semana 4">
             </div>
         </div>
     </div>
@@ -155,18 +187,20 @@
     <!-- Semana 5 -->
     <div class="event" onclick="toggleDetails('s5')">
         <div class="event-header">
-            <img src="{% static 'img/P017.jpg' %}" alt="Semana 5">
+            <img src="static/img/P017.jpg" alt="Semana 5">
             <h3>Semana 5</h3>
         </div>
+
         <div class="details" id="s5">
             <p>Resultados logrados:</p>
             <ul>
                 <li>Recolección de desechos.</li>
             </ul>
+
             <div class="gallery">
-                <img src="{% static 'img/P018.jpg' %}" alt="Foto 1 semana 5">
-                <img src="{% static 'img/P019.jpg' %}" alt="Foto 2 semana 5">
-                <img src="{% static 'img/P020.jpg' %}" alt="Foto 3 semana 5">
+                <img src="static/img/P018.jpg" alt="Foto 1 semana 5">
+                <img src="static/img/P019.jpg" alt="Foto 2 semana 5">
+                <img src="static/img/P020.jpg" alt="Foto 3 semana 5">
             </div>
         </div>
     </div>
